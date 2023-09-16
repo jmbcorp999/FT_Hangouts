@@ -2,9 +2,11 @@
 
 Welcome to the FT_Hangouts repository, developed using React Native! This application is compatible with Android platforms. This is my second React Native project.
 
-![Demo GIF](./ft_hangouts.gif)
+![Demo GIF](./screenshots/06.png)
 
 Follow the instructions below to set up and test the application.
+
+**Developed and tested on a Linux Ubuntu 23.04 and Android 12**
 
 ----
 
@@ -70,6 +72,16 @@ android/app/build/outputs/bundle/release/app-release.aab
 ````
 ./manage.sh clean
 ````
+
+----
+
+## Screenshots
+
+![Demo GIF](./screenshots/01.png)
+![Demo GIF](./screenshots/02.png)
+![Demo GIF](./screenshots/03.png)
+![Demo GIF](./screenshots/04.png)
+![Demo GIF](./screenshots/05.png)
 
 ----
 
