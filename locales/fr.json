@@ -1,0 +1,52 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "contacts": "Contacts",
+    "settings": "Reglages",
+    "messages": "Messages",
+    "backgrounded": "L'application a été mise en arrière-plan à "
+  },
+  "contacts": {
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "phone": "Téléphone",
+    "email": "Email",
+    "adrese": "Adresse",
+    "save": "Enregistrer"
+  },
+  "messages": {
+    "success": "Succès",
+    "convWith": "Conversation avec : ",
+    "typeSMS": "Taper votre message",
+    "confirmDelete": "Etes vous sur de vouloir supprimer ce contact ?",
+    "confirm": "Confirmer",
+    "cancel": "Annuler",
+    "contactDeleted": "Contact supprimé avec succès",
+    "updated": "Contact mis à jour avec succès",
+    "permissions": "Permissions accordées",
+    "contactSaved": "Contact enregistré avec succès"
+  },
+  "errors": {
+    "error": "Erreur",
+    "allFields": "Tous les champs sont obligatoires",
+    "phoneFormat": "Le format du numero de téléphone est incorrect",
+    "createContact": "Erreur lors de la création du contact",
+    "getContact": "Erreur lors de la récupération du contact",
+    "getContacts": "Erreur lors de la récupération des contacts",
+    "noContactToEdit": "Aucun contact à modifier",
+    "noContactSelected": "Aucun contact sélectionné",
+    "noAdress": "Aucune numero de telephone trouvé",
+    "deleteContact": "Erreur lors de la suppression du contact",
+    "NoContactToUpdate": "Aucun contact à mettre à jour",
+    "updateContact": "Erreur lors de la mise à jour du contact",
+    "emailFormat": "Le format de l'email est incorrect",
+    "invalidCharacters": "Seulement des lettres, chiffres, espaces ou tirets"
+  },
+  "settings": {
+    "select_language": "Sélectionnez la langue",
+    "success": "Succès",
+    "language_changed": "La langue a été changée",
+    "checkPermissions": "Vérifier les permissions",
+    "switchTheme": "Basculer thème clair / sombre"
+  },
+}

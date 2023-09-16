@@ -1,0 +1,25 @@
+creer script de deploiement
+creer le README
+
+// build
+keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.p12 -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+
+cd android
+./gradlew bundleRelease
+android/app/build/outputs/bundle/release/app-release.aab
+
+cd android
+./gradlew assembleRelease
+android/app/build/outputs/apk/release/app-release.apk
+
+// install
+npm install
+cp SmsModule.java node_modules/react-native-get-sms-android/android/src/main/java/com/react
+npm start
+
+// cleaning
+cd android
+./gradlew clean
+cd ..
+rm -rf node_modules
+rm android/.gradle/8.0.1/executionHistory/executionHistory.bin

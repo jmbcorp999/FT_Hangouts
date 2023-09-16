@@ -1,0 +1,53 @@
+{
+  "menu": {
+    "home": "Home",
+    "contacts": "Contacts",
+    "settings": "Settings",
+    "messages": "Messages",
+    "backgrounded": "Application has been backgrounded at "
+  },
+  "contacts": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone",
+    "email": "Email",
+    "adrese": "Address",
+    "save": "Save"
+  },
+  "messages": {
+    "success": "Success",
+    "convWith": "Conversation with: ",
+    "typeSMS": "Type your message",
+    "confirmDelete": "Are you sure you want to delete this contact?",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "contactDeleted": "Contact successfully deleted",
+    "updated": "Contact successfully updated",
+    "permissions": "Permissions granted",
+    "contactSaved": "Contact successfully saved"
+  },
+  "errors": {
+    "error": "Error",
+    "allFields": "All fields are mandatory",
+    "phoneFormat": "The phone number format is incorrect",
+    "createContact": "Error creating the contact",
+    "getContact": "Error retrieving the contact",
+    "getContacts": "Error retrieving the contacts",
+    "noContactToEdit": "No contact to edit",
+    "noContactSelected": "No contact selected",
+    "noAdress": "No phone number found",
+    "deleteContact": "Error deleting the contact",
+    "NoContactToUpdate": "No contact to update",
+    "updateContact": "Error updating the contact",
+    "emailFormat": "The email format is incorrect",
+    "invalidCharacters": "Only letters, numbers, spaces, or dashes"
+
+  },
+  "settings": {
+	"select_language": "Choose your language",
+    "success": "Success",
+    "language_changed": "Language changed successfully",
+    "checkPermissions": "Check permissions",
+    "switchTheme": "Toggle light / dark theme"
+  }
+}
