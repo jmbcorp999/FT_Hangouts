@@ -30,9 +30,6 @@ end_step() {
 if [ "$1" == "build" ]; then
     start_step "Build"
 
-    echo -e "${YELLOW}Generating keys...${NC}"
-    keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.p12 -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
-
     cd android || exit
     echo -e "${YELLOW}Generating bundle...${NC}"
     ./gradlew bundleRelease
@@ -47,32 +44,43 @@ elif [ "$1" == "install" ]; then
     start_step "Install"
 
     echo -e "${YELLOW}Installing npm dependencies...${NC}"
-    npm install
+    npm install 2> /dev/null
 
     echo -e "${YELLOW}Copying SmsModule.java...${NC}"
     cp SmsModule.java node_modules/react-native-get-sms-android/android/src/main/java/com/react
 
+    end_step "Install"
+elif [ "$1" == "start" ]; then
+    start_step "Start"
+
     echo -e "${YELLOW}Starting npm server...${NC}"
     npm start
 
-    end_step "Install"
+    end_step "Start"
 elif [ "$1" == "clean" ]; then
     start_step "Clean"
 
     cd android || exit
     echo -e "${YELLOW}Cleaning with Gradle...${NC}"
     ./gradlew clean 2> /dev/null
+    echo -e "${GREEN}Gradle clean completed.${NC}"
 
     cd .. || exit
     echo -e "${YELLOW}Removing node_modules...${NC}"
     rm -rf node_modules 2> /dev/null
+    echo -e "${GREEN}node_modules removed.${NC}"
 
     echo -e "${YELLOW}Removing Gradle execution history...${NC}"
     rm android/.gradle/8.0.1/executionHistory/executionHistory.bin 2> /dev/null
     echo -e "${GREEN}Project cleaned.${NC}"
 
+    echo -e "${YELLOW}Removing generated files...${NC}"
+    rm android/app/build/outputs/apk/release/app-release.apk 2> /dev/null
+    rm android/app/build/outputs/bundle/release/app-release.aab 2> /dev/null
+    echo -e "${GREEN}Generated files removed.${NC}"
+
     end_step "Clean"
 else
-    echo -e "${RED}Invalid option. Use 'build', 'install', or 'clean'.${NC}"
+    echo -e "${RED}Invalid option. Use 'build', 'install', 'start', or 'clean'.${NC}"
     usage
 fi
